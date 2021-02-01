@@ -43,6 +43,7 @@ git-commit-style-guide
 * test: 测试用例，包括单元测试、集成测试等
 * chore: 改变构建流程、或者增加依赖库、工具等
 * revert: 回滚到上一个版本
+* merge: 代码合并
 
 **格式要求：**
 
@@ -57,6 +58,8 @@ git-commit-style-guide
 #
 # 尾部：如果需要的化可以添加一个链接到issue地址或者其它文档，或者关闭某个issue。
 ```
+
+> 参考： [如何规范你的 Git commit](https://zhuanlan.zhihu.com/p/182553920?utm_source=org.mozilla.firefox)
 
 ### Git分支与版本发布规范
 
@@ -151,4 +154,20 @@ git-commit-style-guide
   $ tnpm run changelog                    # 使用npm script中的changlog命令直接从git元数据生成日志。
   $ git tag v0.1.0
   $ git push origin v0.1.0
+```
+
+### Git config 配置
+
+git 提交姓名必须是中文的 注：只是我们项目自己的规定
+
+可以通过下面方式配置
+
+```bash
+
+ git config --global user.name "your_name"
+ git config --global user.email  "your_email"
+ // 或者
+ git config user.name "your_name"
+ git config user.email "your_email"
+
 ```
